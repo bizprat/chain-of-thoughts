@@ -5,8 +5,9 @@ const readline = require('readline');
 // Configuration for the LLM API
 const LLM_API_URL = process.env.LLM_API_URL;
 const LLM_API_KEY = process.env.LLM_API_KEY;
+const LLM_MODEL = process.env.LLM_MODEL;
 
-if (!LLM_API_URL || !LLM_API_KEY) {
+if (!LLM_API_URL || !LLM_API_KEY || !LLM_MODEL) {
   console.error(
     'Missing required environment variables. Please check your .env file'
   );
@@ -25,8 +26,7 @@ async function callLLM(prompt) {
     const response = await axios.post(
       LLM_API_URL,
       {
-        model:
-          'meta-llama/Llama-3.3-70B-Instruct-Turbo-Free', // or any other model you prefer
+        model: LLM_MODEL,
         messages: [
           {
             role: 'system',

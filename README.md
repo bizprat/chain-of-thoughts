@@ -26,6 +26,7 @@ npm install
 ```env
 LLM_API_URL=your_api_url
 LLM_API_KEY=your_api_key
+LLM_MODEL=your_llm_model
 ```
 
 ## Usage
@@ -45,6 +46,7 @@ The program will:
 
 - `LLM_API_URL`: The URL for the LLM API
 - `LLM_API_KEY`: Your API key for authentication
+- `LLM_MODEL`: The model name to use for LLM API (e.g., meta-llama/Llama-3.3-70B-Instruct-Turbo-Free)
 
 ## Dependencies
 
